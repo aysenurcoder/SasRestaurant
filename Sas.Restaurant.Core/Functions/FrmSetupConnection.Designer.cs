@@ -38,8 +38,8 @@ namespace Sas.Restaurant.Core.Functions
             this.txtUser = new DevExpress.XtraEditors.TextEdit();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.btnBaglantiTest = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtServer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
@@ -126,33 +126,33 @@ namespace Sas.Restaurant.Core.Functions
             this.btnBaglantiTest.Text = "Bağlantıyı Test Et";
             this.btnBaglantiTest.Click += new System.EventHandler(this.btnBaglantiTest_Click);
             // 
-            // btnKaydet
-            // 
-            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(178, 393);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(164, 49);
-            this.btnKaydet.TabIndex = 6;
-            this.btnKaydet.Text = "Ayarları Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
             // btnKapat
             // 
             this.btnKapat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.ImageOptions.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(348, 393);
+            this.btnKapat.Location = new System.Drawing.Point(340, 393);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(158, 49);
+            this.btnKapat.Size = new System.Drawing.Size(166, 49);
             this.btnKapat.TabIndex = 7;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnKaydet.Location = new System.Drawing.Point(176, 393);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(158, 49);
+            this.btnKaydet.TabIndex = 8;
+            this.btnKaydet.Text = "Ayarları Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // FrmSetupConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 588);
-            this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnBaglantiTest);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
@@ -180,8 +180,8 @@ namespace Sas.Restaurant.Core.Functions
         private DevExpress.XtraEditors.TextEdit txtUser;
         private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.SimpleButton btnBaglantiTest;
-        private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private System.Windows.Forms.ImageList ımageList1;
+        private DevExpress.XtraEditors.SimpleButton btnKaydet;
     }
 }

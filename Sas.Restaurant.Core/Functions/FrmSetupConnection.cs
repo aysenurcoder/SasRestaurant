@@ -37,22 +37,6 @@ namespace Sas.Restaurant.Core.Functions
             }      
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-            BaglantiCumleOlustur();
-            if (ConnectionStringInfo.Check(connectionStringBuilder.ConnectionString))
-            {
-                connectionStringBuilder.InitialCatalog = "Restaurant";
-                ConnectionStringInfo.Set(connectionStringBuilder.ConnectionString);
-                Kaydedildi = true;
-                Close();
-            }
-            else
-            {
-                MessageBox.Show("Bağlantı başarısız");
-            }
-        }
-
         private void txtUser_EditValueChanged(object sender, EventArgs e)
         {
 
@@ -88,6 +72,22 @@ namespace Sas.Restaurant.Core.Functions
         private void btnKapat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            BaglantiCumleOlustur();
+            if (ConnectionStringInfo.Check(connectionStringBuilder.ConnectionString))
+            {
+                connectionStringBuilder.InitialCatalog = "Restaurant";
+                ConnectionStringInfo.Set(connectionStringBuilder.ConnectionString);
+                Kaydedildi = true;
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Bağlantı başarısız");
+            }
         }
     }
 }
