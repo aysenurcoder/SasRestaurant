@@ -9,6 +9,8 @@ namespace Sas.Restaurant.Entities.Enums
     public enum TanimTip
     {
         Birim,
-        UrunGrup
+        UrunGrup,
+        CariTipi,
+        Konum
     }
 }

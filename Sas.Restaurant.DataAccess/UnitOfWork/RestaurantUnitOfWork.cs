@@ -20,6 +20,15 @@ namespace Sas.Restaurant.DataAccess.UnitOfWork
         public ITanimDal TanimDal { get; set; }
         public IPorsiyonDal PorsiyonDal { get; set; }
         public IEkMalzemeDal EkMalzemeDal { get; set; }
+        public IMusteriDal MusteriDal { get; set; }
+        public ITelefonDal TelefonDal { get; set; }
+        public IAdresDal AdresDal { get; set; }
+        public IAdisyonDal AdisyonDal { get; set; }
+        public IEkMalzemeHareketDal EkMalzemeHareketDal { get; set; }
+        public IGarsonDal GarsonDal { get; set; }
+        public IMasaDal MasaDal { get; set; }
+        public IUrunHareketDal UrunHareketDal { get; set; }
+
         public RestaurantUnitOfWork(String connectionString=null)
         {
             if (connectionString==null)
@@ -35,6 +44,15 @@ namespace Sas.Restaurant.DataAccess.UnitOfWork
             TanimDal = new TanimDal(_context);
             EkMalzemeDal = new EkMalzemeDal(_context);
             PorsiyonDal = new PorsiyonDal(_context);
+            MusteriDal = new MusteriDal(_context);
+            TelefonDal = new TelefonDal(_context);
+            AdresDal = new AdresDal(_context);
+            AdisyonDal = new AdisyonDal(_context);
+            EkMalzemeHareketDal = new EkMalzemeHareketDal(_context);
+            GarsonDal = new GarsonDal(_context);
+            MasaDal = new MasaDal(_context);
+            UrunHareketDal = new UrunHareketDal(_context);
+
         }
         private bool disposedValue;
 

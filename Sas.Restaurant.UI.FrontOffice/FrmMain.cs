@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Sas.Restaurant.UI.FrontOffice
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMain : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public FrmMain()
         {
             InitializeComponent();
         }
