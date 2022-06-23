@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\AdisyonToplamDto.cs" />
+    <Compile Include="Dtos\KategoriDto.cs" />
+    <Compile Include="Enums\MasaDurum.cs" />
+    <Compile Include="Enums\MusteriTip.cs" />
     <Compile Include="Enums\TanimTip.cs" />
     <Compile Include="Enums\TelefonAdresTip.cs" />
     <Compile Include="Enums\UrunHareketTip.cs" />
@@ -54,11 +58,14 @@
     <Compile Include="Tables\Garson.cs" />
     <Compile Include="Tables\Masa.cs" />
     <Compile Include="Tables\Musteri.cs" />
+    <Compile Include="Tables\OdemeHareket.cs" />
+    <Compile Include="Tables\OdemeTuru.cs" />
     <Compile Include="Tables\Porsiyon.cs" />
     <Compile Include="Tables\Tanim.cs" />
     <Compile Include="Tables\Telefon.cs" />
     <Compile Include="Tables\Urun.cs" />
     <Compile Include="Tables\UrunHareket.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

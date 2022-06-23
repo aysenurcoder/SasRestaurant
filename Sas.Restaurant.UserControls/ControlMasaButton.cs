@@ -1,0 +1,45 @@
+﻿using DevExpress.XtraEditors;
+using Sas.Restaurant.Entities.Enums;
+using Sas.Restaurant.Entities.Tables;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sas.Restaurant.UserControls
+{
+    public class ControlMasaButton:SimpleButton
+    {
+        private MasaDurum _masaDurum;
+
+        public ControlMasaButton()
+        {
+            MasaDurum = MasaDurum.Bos;
+        }
+        public MasaDurum MasaDurum
+        {
+            get { return _masaDurum; }
+            set
+            {
+                _masaDurum = value;
+                switch (_masaDurum)
+                {
+                    case MasaDurum.Bos:
+                        Appearance.BackColor = Color.Olive;
+                        break;
+                    case MasaDurum.Dolu:
+                        Appearance.BackColor = Color.OrangeRed;
+                        break;
+                    case MasaDurum.Rezervasyon:
+                        Appearance.BackColor = Color.DodgerBlue;
+                        break;
+
+                }
+            }
+        }
+        public Guid AdisyonId { get; set; }
+        public Guid MasaId { get; set; }
+    }
+}

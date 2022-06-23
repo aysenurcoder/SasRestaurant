@@ -261,7 +261,6 @@ namespace Sas.Restaurant.UserControls
             this.Controls.Add(this.layoutControl1);
             this.Name = "ControlMenuKayit";
             this.Size = new System.Drawing.Size(1074, 91);
-            this.Load += new System.EventHandler(this.ControlMenuKayit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();

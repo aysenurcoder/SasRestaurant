@@ -32,10 +32,13 @@ namespace Sas.Restaurant.UI.BackOffice.AnaMenu
             this.components = new System.ComponentModel.Container();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnUrun = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMusteri = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMasa = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGarson = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager2 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOdemeTur = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager2)).BeginInit();
             this.SuspendLayout();
@@ -48,10 +51,13 @@ namespace Sas.Restaurant.UI.BackOffice.AnaMenu
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
             this.btnUrun,
-            this.barButtonItem1});
+            this.btnMusteri,
+            this.btnMasa,
+            this.btnGarson,
+            this.btnOdemeTur});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 3;
+            this.ribbonControl1.MaxItemId = 6;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 385;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -65,6 +71,27 @@ namespace Sas.Restaurant.UI.BackOffice.AnaMenu
             this.btnUrun.Name = "btnUrun";
             this.btnUrun.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUrun_ItemClick);
             // 
+            // btnMusteri
+            // 
+            this.btnMusteri.Caption = "Müşteriler";
+            this.btnMusteri.Id = 2;
+            this.btnMusteri.Name = "btnMusteri";
+            this.btnMusteri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // btnMasa
+            // 
+            this.btnMasa.Caption = "Masalar";
+            this.btnMasa.Id = 3;
+            this.btnMasa.Name = "btnMasa";
+            this.btnMasa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMasa_ItemClick);
+            // 
+            // btnGarson
+            // 
+            this.btnGarson.Caption = "Garson";
+            this.btnGarson.Id = 4;
+            this.btnGarson.Name = "btnGarson";
+            this.btnGarson.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGarson_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -75,7 +102,10 @@ namespace Sas.Restaurant.UI.BackOffice.AnaMenu
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnUrun);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnMusteri);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnMasa);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnGarson);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnOdemeTur);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -83,12 +113,12 @@ namespace Sas.Restaurant.UI.BackOffice.AnaMenu
             // 
             this.xtraTabbedMdiManager2.MdiParent = this;
             // 
-            // barButtonItem1
+            // btnOdemeTur
             // 
-            this.barButtonItem1.Caption = "Müşteriler";
-            this.barButtonItem1.Id = 2;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.btnOdemeTur.Caption = "Ödeme Türleri";
+            this.btnOdemeTur.Id = 5;
+            this.btnOdemeTur.Name = "btnOdemeTur";
+            this.btnOdemeTur.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOdemeTur_ItemClick);
             // 
             // FrmAnaMenu
             // 
@@ -115,7 +145,10 @@ namespace Sas.Restaurant.UI.BackOffice.AnaMenu
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager2;
         private DevExpress.XtraBars.BarButtonItem btnUrun;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnMusteri;
+        private DevExpress.XtraBars.BarButtonItem btnMasa;
+        private DevExpress.XtraBars.BarButtonItem btnGarson;
+        private DevExpress.XtraBars.BarButtonItem btnOdemeTur;
     }
 }
 

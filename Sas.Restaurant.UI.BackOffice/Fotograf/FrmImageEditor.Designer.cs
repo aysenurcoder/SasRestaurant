@@ -177,7 +177,7 @@ namespace Sas.Restaurant.UI.BackOffice.Fotograf
             this.lblCerceve.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lblCerceve.Location = new System.Drawing.Point(-2, 0);
             this.lblCerceve.Name = "lblCerceve";
-            this.lblCerceve.Size = new System.Drawing.Size(356, 216);
+            this.lblCerceve.Size = new System.Drawing.Size(300, 200);
             this.lblCerceve.TabIndex = 2;
             this.lblCerceve.Text = "300X200\r\nLütfen kesmek istediğiniz bölümü çerçeve içine yerleştirin.";
             // 

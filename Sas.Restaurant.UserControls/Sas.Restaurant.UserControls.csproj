@@ -55,11 +55,44 @@
     <Compile Include="ControlAnMenuAlt.Designer.cs">
       <DependentUpon>ControlAnMenuAlt.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlEkMalzemeButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlGarsonButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlGarsonCheckButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlKategoriButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlKategoriUrun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlKategoriUrun.Designer.cs">
+      <DependentUpon>ControlKategoriUrun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlKonumButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlMasaButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ControlMenuKayit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlMenuKayit.Designer.cs">
       <DependentUpon>ControlMenuKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlMusteriButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlOdemeTuruButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlPorsiyonButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -72,6 +105,9 @@
     <EmbeddedResource Include="ControlAnMenuAlt.resx">
       <DependentUpon>ControlAnMenuAlt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlKategoriUrun.resx">
+      <DependentUpon>ControlKategoriUrun.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlMenuKayit.resx">
       <DependentUpon>ControlMenuKayit.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +116,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sas.Restaurant.Entities\Sas.Restaurant.Entities.csproj">
+      <Project>{D60B7195-595E-4BFE-B8C9-3EBF801020B9}</Project>
+      <Name>Sas.Restaurant.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

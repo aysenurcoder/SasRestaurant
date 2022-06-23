@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraEditors;
+﻿//using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
 using System;
 using System.Collections.Generic;
@@ -70,11 +70,6 @@ namespace Sas.Restaurant.UserControls
         public ControlMenuKayit()
         {
             InitializeComponent();
-        }
-
-        private void ControlMenuKayit_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnVazgec_Click(object sender, EventArgs e)

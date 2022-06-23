@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Sas.Restaurant.UI.BackOffice.Fotograf
 {
     public partial class FrmImageEditor : DevExpress.XtraEditors.XtraForm

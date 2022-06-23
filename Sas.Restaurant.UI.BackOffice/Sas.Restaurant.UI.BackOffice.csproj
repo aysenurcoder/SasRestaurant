@@ -92,6 +92,30 @@
     <Compile Include="Fotograf\FrmKamera.Designer.cs">
       <DependentUpon>FrmKamera.cs</DependentUpon>
     </Compile>
+    <Compile Include="Garson\FrmGarson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Garson\FrmGarson.Designer.cs">
+      <DependentUpon>FrmGarson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Garson\FrmGarsonIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Garson\FrmGarsonIslem.Designer.cs">
+      <DependentUpon>FrmGarsonIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masa\FrmMasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masa\FrmMasa.Designer.cs">
+      <DependentUpon>FrmMasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masa\FrmMasaIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masa\FrmMasaIslem.Designer.cs">
+      <DependentUpon>FrmMasaIslem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Musteri\FrmMusteri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +127,18 @@
     </Compile>
     <Compile Include="Musteri\FrmMusteriIslem.Designer.cs">
       <DependentUpon>FrmMusteriIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeTuru\FrmOdemeTuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeTuru\FrmOdemeTuru.Designer.cs">
+      <DependentUpon>FrmOdemeTuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeTuru\FrmOdemeTuruIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeTuru\FrmOdemeTuruIslem.Designer.cs">
+      <DependentUpon>FrmOdemeTuruIslem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,11 +169,29 @@
     <EmbeddedResource Include="Fotograf\FrmKamera.resx">
       <DependentUpon>FrmKamera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Garson\FrmGarson.resx">
+      <DependentUpon>FrmGarson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Garson\FrmGarsonIslem.resx">
+      <DependentUpon>FrmGarsonIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masa\FrmMasa.resx">
+      <DependentUpon>FrmMasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masa\FrmMasaIslem.resx">
+      <DependentUpon>FrmMasaIslem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Musteri\FrmMusteri.resx">
       <DependentUpon>FrmMusteri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Musteri\FrmMusteriIslem.resx">
       <DependentUpon>FrmMusteriIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeTuru\FrmOdemeTuru.resx">
+      <DependentUpon>FrmOdemeTuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeTuru\FrmOdemeTuruIslem.resx">
+      <DependentUpon>FrmOdemeTuruIslem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

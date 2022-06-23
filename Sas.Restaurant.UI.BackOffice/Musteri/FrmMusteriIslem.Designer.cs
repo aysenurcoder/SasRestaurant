@@ -580,6 +580,7 @@ namespace Sas.Restaurant.UI.BackOffice.Musteri
             // 
             this.groupAdresMenu.Controls.Add(this.controlMenuAdres);
             this.groupAdresMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupAdresMenu.Enabled = false;
             this.groupAdresMenu.Location = new System.Drawing.Point(0, 160);
             this.groupAdresMenu.Name = "groupAdresMenu";
             this.groupAdresMenu.Size = new System.Drawing.Size(711, 102);

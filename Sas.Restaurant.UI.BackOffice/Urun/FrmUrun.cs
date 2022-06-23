@@ -1,7 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using Sas.Restaurant.Business.Workers;
-using Sas.Restaurant.Core.Extensions;
 using Sas.Restaurant.UI.BackOffice.Fotograf;
+using Sas.Restaurant.Core.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 
 namespace Sas.Restaurant.UI.BackOffice.Urun

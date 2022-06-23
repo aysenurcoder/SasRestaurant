@@ -383,7 +383,7 @@ namespace Sas.Restaurant.UI.BackOffice.Urun
             this.colPorsiyonFiyat.Name = "colPorsiyonFiyat";
             this.colPorsiyonFiyat.Visible = true;
             this.colPorsiyonFiyat.VisibleIndex = 2;
-            this.colPorsiyonFiyat.Width = 171;
+            this.colPorsiyonFiyat.Width = 164;
             // 
             // colPorsiyonCarpan
             // 
@@ -393,7 +393,7 @@ namespace Sas.Restaurant.UI.BackOffice.Urun
             this.colPorsiyonCarpan.Name = "colPorsiyonCarpan";
             this.colPorsiyonCarpan.Visible = true;
             this.colPorsiyonCarpan.VisibleIndex = 3;
-            this.colPorsiyonCarpan.Width = 85;
+            this.colPorsiyonCarpan.Width = 92;
             // 
             // colPorsiyonBirim
             // 
@@ -430,7 +430,6 @@ namespace Sas.Restaurant.UI.BackOffice.Urun
             this.controlMenuPorsiyon.SilClick += new System.EventHandler(this.controlMenuPorsiyon_SilClick);
             this.controlMenuPorsiyon.KaydetClick += new System.EventHandler(this.controlMenuPorsiyon_KaydetClick);
             this.controlMenuPorsiyon.VazgecClick += new System.EventHandler(this.controlMenuPorsiyon_VazgecClick);
-            this.controlMenuPorsiyon.Load += new System.EventHandler(this.controlMenuPorsiyon_Load);
             // 
             // groupPorsiyonBilgi
             // 

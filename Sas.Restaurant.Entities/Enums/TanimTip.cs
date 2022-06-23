@@ -11,6 +11,7 @@ namespace Sas.Restaurant.Entities.Enums
         Birim,
         UrunGrup,
         CariTipi,
-        Konum
+        Konum,
+        OdemeTuru
     }
 }

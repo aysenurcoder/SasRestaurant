@@ -1,9 +1,17 @@
-﻿using Sas.Restaurant.Business.Workers;
+﻿using DevExpress.XtraEditors;
+using Sas.Restaurant.Business.Workers;
 using Sas.Restaurant.Entities.Enums;
 using Sas.Restaurant.Entities.Tables;
 using Sas.Restaurant.UI.BackOffice.Fotograf;
 using Sas.Restaurant.UI.BackOffice.Tanim;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sas.Restaurant.UI.BackOffice.Urun
@@ -54,7 +62,7 @@ namespace Sas.Restaurant.UI.BackOffice.Urun
             txtEkMalzemeCarpan.DataBindings.Clear();
             txtPorsiyonAciklama.DataBindings.Clear();
             txtBirim.DataBindings.Clear();
-            txtMalzemeAdi.DataBindings.Add("Text", _porsiyonEntity, "Adi", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtPorsiyonAdi.DataBindings.Add("Text", _porsiyonEntity, "Adi", false, DataSourceUpdateMode.OnPropertyChanged);
             txtPorsiyonFiyat.DataBindings.Add("Value", _porsiyonEntity, "Fiyat", false, DataSourceUpdateMode.OnPropertyChanged);
             txtEkMalzemeCarpan.DataBindings.Add("Value", _porsiyonEntity, "EkMalzemeCarpan", false, DataSourceUpdateMode.OnPropertyChanged);
             txtPorsiyonAciklama.DataBindings.Add("Text", _porsiyonEntity, "Aciklama", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -110,6 +118,7 @@ namespace Sas.Restaurant.UI.BackOffice.Urun
             if (MessageBox.Show("Seçili olan veriyi silmek ister misiniz?","Uyarı",MessageBoxButtons.YesNo)==DialogResult.Yes)
             {
                 gridPorsiyon.DeleteSelectedRows();
+                worker.Commit();
             }
         }
 
@@ -129,11 +138,7 @@ namespace Sas.Restaurant.UI.BackOffice.Urun
             groupAltMenu.Enabled = true;
 
         }
-
-        private void controlMenuPorsiyon_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
@@ -175,6 +180,7 @@ namespace Sas.Restaurant.UI.BackOffice.Urun
             if (MessageBox.Show("Seçili olan veriyi silmek ister misiniz?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 gridMalzeme.DeleteSelectedRows();
+                worker.Commit();
             }
         }
 
