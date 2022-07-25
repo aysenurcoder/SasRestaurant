@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sas.Restaurant.UI.FrontOffi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sas.Restaurant.UserControls", "Sas.Restaurant.UserControls\Sas.Restaurant.UserControls.csproj", "{A069EFA6-EF17-4177-94B2-1CB6F7966123}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sas.Restaurant.Mutfak", "Sas.Restaurant.Mutfak\Sas.Restaurant.Mutfak.csproj", "{BB26A678-1ECD-45EC-8790-B5ACA0C6021A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sas.Restaurant.Components", "Sas.Restaurant.Components\Sas.Restaurant.Components.csproj", "{BBA0F827-36F1-434D-9B1B-3142D344F927}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,14 @@ Global
 		{A069EFA6-EF17-4177-94B2-1CB6F7966123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A069EFA6-EF17-4177-94B2-1CB6F7966123}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A069EFA6-EF17-4177-94B2-1CB6F7966123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB26A678-1ECD-45EC-8790-B5ACA0C6021A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB26A678-1ECD-45EC-8790-B5ACA0C6021A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB26A678-1ECD-45EC-8790-B5ACA0C6021A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB26A678-1ECD-45EC-8790-B5ACA0C6021A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA0F827-36F1-434D-9B1B-3142D344F927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA0F827-36F1-434D-9B1B-3142D344F927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA0F827-36F1-434D-9B1B-3142D344F927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA0F827-36F1-434D-9B1B-3142D344F927}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +79,8 @@ Global
 		{CB9FD07C-D523-4802-8208-06375CC1CC74} = {B859157A-43F4-41FF-9B9C-90CFCC7B519F}
 		{8B334440-85EF-4440-88FD-2BB6EB31FF21} = {B859157A-43F4-41FF-9B9C-90CFCC7B519F}
 		{A069EFA6-EF17-4177-94B2-1CB6F7966123} = {B859157A-43F4-41FF-9B9C-90CFCC7B519F}
+		{BB26A678-1ECD-45EC-8790-B5ACA0C6021A} = {B859157A-43F4-41FF-9B9C-90CFCC7B519F}
+		{BBA0F827-36F1-434D-9B1B-3142D344F927} = {B859157A-43F4-41FF-9B9C-90CFCC7B519F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FAE909ED-2C5A-410B-B075-779B6BB7A8C7}

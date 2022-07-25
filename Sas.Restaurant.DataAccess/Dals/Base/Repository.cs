@@ -1,27 +1,25 @@
 ﻿using Sas.Restaurant.DataAccess.Interfaces.Base;
 using Sas.Restaurant.Entities.Interfaces;
+using Sas.Restaurant.Core.Extensions;
 using System;
-using System.Data.Entity;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using Sas.Restaurant.Core.Extensions;
+
 
 namespace Sas.Restaurant.DataAccess.Dals.Base
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity, new()
     {
         private readonly DbContext _context;
-
         public Repository(DbContext context)
         {
             _context = context;
-
-                
         }
         private bool disposedValue;
 
@@ -37,7 +35,7 @@ namespace Sas.Restaurant.DataAccess.Dals.Base
                 _context.Entry(entity).State = EntityState.Added;
             }
         }
-      
+
         public void AddOrUpdate(TEntity entity)
         {
             _context.Set<TEntity>().AddOrUpdate(entity);
@@ -50,6 +48,7 @@ namespace Sas.Restaurant.DataAccess.Dals.Base
                 _context.Set<TEntity>().AddOrUpdate(entity);
             }
         }
+
         public void Update(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
@@ -62,6 +61,8 @@ namespace Sas.Restaurant.DataAccess.Dals.Base
                 _context.Entry(entity).State = EntityState.Modified;
             }
         }
+
+
         public void Delete(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Deleted;
@@ -71,12 +72,34 @@ namespace Sas.Restaurant.DataAccess.Dals.Base
         {
             foreach (var entity in entities)
             {
-                _context.Entry(entity).State = EntityState.Deleted;          }
+                _context.Entry(entity).State = EntityState.Deleted;
+            }
         }
 
         public void Delete(Expression<Func<TEntity, bool>> filter)
         {
             _context.Set<TEntity>().RemoveRange(_context.Set<TEntity>().Where(filter));
+        }
+
+        public void EntityStateChange(Expression<Func<TEntity, bool>> filter, EntityState state)
+        {
+            foreach (var entity in _context.Set<TEntity>().Local.AsQueryable().Where(filter).ToList())
+            {
+                _context.Entry(entity).State = state;
+            }
+        }
+
+        public void EntityStateChange(TEntity entity, EntityState state)
+        {
+            _context.Entry(entity).State = state;
+        }
+
+        public void EntityStateChange(IEnumerable<TEntity> entities, EntityState state)
+        {
+            foreach (var entity in entities)
+            {
+                _context.Entry(entity).State = state;
+            }
         }
 
         public bool Exist(Expression<Func<TEntity, bool>> filter)
@@ -89,11 +112,9 @@ namespace Sas.Restaurant.DataAccess.Dals.Base
             return _context.Set<TEntity>().MultipleInclude(includes).SingleOrDefault(filter);
         }
 
-        public IEnumerable<TEntity> GetList(Expression<Func<TEntity, bool>> filter,params Expression<Func<TEntity, object>>[] includes)
+        public IEnumerable<TEntity> GetList(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includes)
         {
-            return filter == null 
-                ? _context.Set<TEntity>().MultipleInclude(includes).AsNoTracking().ToList() 
-                : _context.Set<TEntity>().MultipleInclude(includes).Where(filter).AsNoTracking().ToList();
+            return filter == null ? _context.Set<TEntity>().MultipleInclude(includes).AsNoTracking().ToList() : _context.Set<TEntity>().MultipleInclude(includes).Where(filter).AsNoTracking().ToList();
         }
 
         public bool HasChanges()
@@ -101,9 +122,9 @@ namespace Sas.Restaurant.DataAccess.Dals.Base
             return _context.ChangeTracker.Entries<TEntity>().Any();
         }
 
-        public void Load(Expression<Func<TEntity, bool>> filter,params Expression<Func<TEntity, object>>[] includes)
+        public void Load(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includes)
         {
-            if (filter==null)
+            if (filter == null)
             {
                 _context.Set<TEntity>().MultipleInclude(includes).Load();
             }
@@ -113,21 +134,24 @@ namespace Sas.Restaurant.DataAccess.Dals.Base
             }
         }
 
-        public IQueryable<TEntity> Select(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TEntity>> selector,params Expression<Func<TEntity, object>>[] includes)
+        public IQueryable<TEntity> Select(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TEntity>> selector, params Expression<Func<TEntity, object>>[] includes)
         {
-            return filter == null
-                ? _context.Set<TEntity>().MultipleInclude(includes).Select(selector) :
-                _context.Set<TEntity>().MultipleInclude(includes).Where(filter).Select(selector);
+            return filter == null ? _context.Set<TEntity>().MultipleInclude(includes).Select(selector) : _context.Set<TEntity>().MultipleInclude(includes).Where(filter).Select(selector);
         }
 
-        public IQueryable<TResult> Select<TResult>(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TResult>> selector,params Expression<Func<TEntity, object>>[] includes)
+        public IQueryable<TResult> Select<TResult>(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TResult>> selector, params Expression<Func<TEntity, object>>[] includes)
         {
-            return filter == null
-                ? _context.Set<TEntity>().MultipleInclude(includes).Select(selector)
-                : _context.Set<TEntity>().MultipleInclude(includes).Where(filter).Select(selector);
-
+            return filter == null ? _context.Set<TEntity>().MultipleInclude(includes).Select(selector) : _context.Set<TEntity>().MultipleInclude(includes).Where(filter).Select(selector);
         }
 
+
+
+
+
+        public BindingList<TEntity> BindingList()
+        {
+            return _context.Set<TEntity>().Local.ToBindingList();
+        }
 
         protected virtual void Dispose(bool disposing)
         {
@@ -157,30 +181,7 @@ namespace Sas.Restaurant.DataAccess.Dals.Base
             Dispose(disposing: true);
             GC.SuppressFinalize(this);
         }
-        public BindingList<TEntity> BindingList()
-        {
-            return _context.Set<TEntity>().Local.ToBindingList();
-        }
 
-        public void EntityStateChange(Expression<Func<TEntity, bool>> filter, EntityState state)
-        {
-            foreach (var entity in _context.Set<TEntity>().Local.AsQueryable().Where(filter).ToList())
-            {
-                _context.Entry(entity).State = state;
-            }
-        }
 
-        public void EntityStateChange(TEntity entity, EntityState state)
-        {
-            _context.Entry(entity).State = state;
-        }
-
-        public void EntityStateChange(IEnumerable<TEntity> entities, EntityState state)
-        {
-            foreach (var entity in entities)
-            {
-                _context.Entry(entity).State = state;
-            }
-        }
     }
 }

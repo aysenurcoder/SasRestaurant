@@ -1,6 +1,7 @@
 ﻿using Sas.Restaurant.Business.Managers.Base;
 using Sas.Restaurant.Business.Services;
 using Sas.Restaurant.DataAccess.UnitOfWork;
+using Sas.Restaurant.Entities.Dtos;
 using Sas.Restaurant.Entities.Tables;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,9 @@ namespace Sas.Restaurant.Business.Managers
     {
         public TelefonManager(IUnitOfWork uow) : base(uow)
         {
-
+            
         }
+
+      
     }
 }

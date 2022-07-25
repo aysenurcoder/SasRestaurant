@@ -1,4 +1,5 @@
-﻿using Sas.Restaurant.Entities.Tables.Base;
+﻿using Sas.Restaurant.Entities.Enums;
+using Sas.Restaurant.Entities.Tables.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +10,14 @@ namespace Sas.Restaurant.Entities.Tables
 {
     public class Adisyon:EntityBase
     {
-        public bool AdisyonAcik { get; set; }
+        public AdisyonTipi AdisyonTipi { get; set; }
+        public AdisyonDurum AdisyonDurum { get; set; }
         public decimal Indirim { get; set; }
         public decimal Tutar { get; set; }
         public Guid? MasaId { get; set; }
         public Guid? GarsonId { get; set; }
         public virtual Masa Masa { get; set; }
-        public virtual Garson Garson  { get; set; }
+        public virtual Personel Garson  { get; set; }
         public Guid? MusteriId { get; set; }
         public virtual Musteri Musteri  { get; set; }
         public virtual ICollection<UrunHareket> UrunHareketleri { get; set; }

@@ -29,6 +29,7 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGarson));
             this.controlMenu = new Sas.Restaurant.UserControls.ControlAnMenuAlt();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -37,6 +38,7 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
             this.colAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoyadi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPersonelTipi = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlGarson)).BeginInit();
@@ -71,9 +73,14 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl1.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.labelControl1.ImageOptions.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelControl1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("labelControl1.ImageOptions.Image")));
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(1185, 72);
@@ -94,6 +101,7 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
             // gridGarson
             // 
             this.gridGarson.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colPersonelTipi,
             this.colAdi,
             this.colSoyadi,
             this.colAciklama});
@@ -107,7 +115,7 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
             this.colAdi.MinWidth = 25;
             this.colAdi.Name = "colAdi";
             this.colAdi.Visible = true;
-            this.colAdi.VisibleIndex = 0;
+            this.colAdi.VisibleIndex = 1;
             this.colAdi.Width = 94;
             // 
             // colSoyadi
@@ -117,7 +125,7 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
             this.colSoyadi.MinWidth = 25;
             this.colSoyadi.Name = "colSoyadi";
             this.colSoyadi.Visible = true;
-            this.colSoyadi.VisibleIndex = 1;
+            this.colSoyadi.VisibleIndex = 2;
             this.colSoyadi.Width = 94;
             // 
             // colAciklama
@@ -127,8 +135,18 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
             this.colAciklama.MinWidth = 25;
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 2;
+            this.colAciklama.VisibleIndex = 3;
             this.colAciklama.Width = 94;
+            // 
+            // colPersonelTipi
+            // 
+            this.colPersonelTipi.Caption = "Personel Tipi";
+            this.colPersonelTipi.FieldName = "PersonelTip";
+            this.colPersonelTipi.MinWidth = 25;
+            this.colPersonelTipi.Name = "colPersonelTipi";
+            this.colPersonelTipi.Visible = true;
+            this.colPersonelTipi.VisibleIndex = 0;
+            this.colPersonelTipi.Width = 94;
             // 
             // FrmGarson
             // 
@@ -139,7 +157,7 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl1);
             this.Name = "FrmGarson";
-            this.Text = "FrmGarson";
+            this.Text = "Garsonlar";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlGarson)).EndInit();
@@ -158,5 +176,6 @@ namespace Sas.Restaurant.UI.BackOffice.Garson
         private DevExpress.XtraGrid.Columns.GridColumn colAdi;
         private DevExpress.XtraGrid.Columns.GridColumn colSoyadi;
         private DevExpress.XtraGrid.Columns.GridColumn colAciklama;
+        private DevExpress.XtraGrid.Columns.GridColumn colPersonelTipi;
     }
 }

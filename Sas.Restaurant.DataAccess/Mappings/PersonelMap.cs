@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Sas.Restaurant.DataAccess.Mappings
 {
-    public class GarsonMap: EntityTypeConfiguration<Garson>
+    public class PersonelMap: EntityTypeConfiguration<Personel>
     {
-        public GarsonMap()
+        public PersonelMap()
         {
             Property(c => c.Adi).HasMaxLength(50);
             Property(c => c.Soyadi).HasMaxLength(50);
@@ -18,6 +18,7 @@ namespace Sas.Restaurant.DataAccess.Mappings
             ToTable("Garsonlar");
             Property(c => c.Adi).HasColumnName("Adi");
             Property(c => c.Soyadi).HasColumnName("Soyadi");
+            Property(c => c.PersonelTipi).HasColumnName("PersonelTipi");
         }
     }
 }

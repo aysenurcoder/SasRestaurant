@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Sas.Restaurant.Entities.Tables
 {
-    public class Garson:EntityBase
+    public class AramaKaydi:EntityBase
     {
-        public string Adi { get; set; }
-        public string Soyadi { get; set; }
+        public string Telefon { get; set; }
+        public Guid? MusteriId { get; set; }
+        public virtual Musteri Musteri { get; set; }
     }
 }

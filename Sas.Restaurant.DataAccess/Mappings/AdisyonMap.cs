@@ -21,7 +21,8 @@ namespace Sas.Restaurant.DataAccess.Mappings
             Property(c => c.Tutar).HasColumnName("Tutar");
             Property(c => c.GarsonId).HasColumnName("GarsonId");
             Property(c => c.MasaId).HasColumnName("MasaId");
-            Property(c => c.AdisyonAcik).HasColumnName("AdisyonAcik");
+            Property(c => c.AdisyonDurum).HasColumnName("AdisyonDurum");
+            Property(c => c.AdisyonTipi).HasColumnName("AdisyonTipi");
         }
     }
 }

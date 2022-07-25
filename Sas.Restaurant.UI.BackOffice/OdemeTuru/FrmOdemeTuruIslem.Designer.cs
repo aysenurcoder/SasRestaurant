@@ -31,6 +31,9 @@ namespace Sas.Restaurant.UI.BackOffice.OdemeTuru
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOdemeTuruIslem));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupAltMenu = new DevExpress.XtraEditors.GroupControl();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtOdemeTuru = new DevExpress.XtraEditors.ButtonEdit();
@@ -38,16 +41,13 @@ namespace Sas.Restaurant.UI.BackOffice.OdemeTuru
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.groupAltMenu = new DevExpress.XtraEditors.GroupControl();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupAltMenu)).BeginInit();
+            this.groupAltMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOdemeTuru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupAltMenu)).BeginInit();
-            this.groupAltMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -65,6 +65,41 @@ namespace Sas.Restaurant.UI.BackOffice.OdemeTuru
             this.groupControl1.Size = new System.Drawing.Size(652, 340);
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Ödeme Türü Bilgisi";
+            // 
+            // groupAltMenu
+            // 
+            this.groupAltMenu.Controls.Add(this.btnKaydet);
+            this.groupAltMenu.Controls.Add(this.btnKapat);
+            this.groupAltMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupAltMenu.Location = new System.Drawing.Point(2, 245);
+            this.groupAltMenu.Name = "groupAltMenu";
+            this.groupAltMenu.Size = new System.Drawing.Size(648, 93);
+            this.groupAltMenu.TabIndex = 9;
+            this.groupAltMenu.Text = "Menü";
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
+            this.btnKaydet.Location = new System.Drawing.Point(466, 28);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnKaydet.Size = new System.Drawing.Size(90, 63);
+            this.btnKaydet.TabIndex = 0;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.ImageOptions.Image")));
+            this.btnKapat.Location = new System.Drawing.Point(556, 28);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnKapat.Size = new System.Drawing.Size(90, 63);
+            this.btnKapat.TabIndex = 1;
+            this.btnKapat.Text = "Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // txtAciklama
             // 
@@ -145,41 +180,6 @@ namespace Sas.Restaurant.UI.BackOffice.OdemeTuru
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Ödeme Türü İşlem Formu";
             // 
-            // groupAltMenu
-            // 
-            this.groupAltMenu.Controls.Add(this.btnKaydet);
-            this.groupAltMenu.Controls.Add(this.btnKapat);
-            this.groupAltMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupAltMenu.Location = new System.Drawing.Point(2, 245);
-            this.groupAltMenu.Name = "groupAltMenu";
-            this.groupAltMenu.Size = new System.Drawing.Size(648, 93);
-            this.groupAltMenu.TabIndex = 9;
-            this.groupAltMenu.Text = "Menü";
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(466, 28);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnKaydet.Size = new System.Drawing.Size(90, 63);
-            this.btnKaydet.TabIndex = 0;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.ImageOptions.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(556, 28);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnKapat.Size = new System.Drawing.Size(90, 63);
-            this.btnKapat.TabIndex = 1;
-            this.btnKapat.Text = "Kapat";
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
             // FrmOdemeTuruIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -192,14 +192,14 @@ namespace Sas.Restaurant.UI.BackOffice.OdemeTuru
             this.MinimizeBox = false;
             this.Name = "FrmOdemeTuruIslem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmOdemeTuruIslem";
+            this.Text = "Ödeme İşlemleri Formu";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupAltMenu)).EndInit();
+            this.groupAltMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOdemeTuru.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupAltMenu)).EndInit();
-            this.groupAltMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

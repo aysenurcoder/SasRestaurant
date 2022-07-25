@@ -39,13 +39,18 @@
       <HintPath>..\packages\Control.Draggable.1.0.5049.269\lib\net35-Client\Control.Draggable.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v21.2" />
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v21.2" />
     <Reference Include="DevExpress.Data.v21.2" />
     <Reference Include="DevExpress.Dialogs.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v21.2.Core" />
     <Reference Include="DevExpress.Utils.v21.2" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v21.2" />
     <Reference Include="DevExpress.Sparkline.v21.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraDialogs.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.2" />
     <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -74,11 +79,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adisyon\FrmAdisyonHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adisyon\FrmAdisyonHareket.Designer.cs">
+      <DependentUpon>FrmAdisyonHareket.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnaMenu\FrmAnaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AnaMenu\FrmAnaMenu.Designer.cs">
       <DependentUpon>FrmAnaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaMenu\FrmAnaMenuBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaMenu\FrmAnaMenuBilgi.Designer.cs">
+      <DependentUpon>FrmAnaMenuBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaMenu\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaMenu\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Fotograf\FrmImageEditor.cs">
       <SubType>Form</SubType>
@@ -104,6 +127,12 @@
     <Compile Include="Garson\FrmGarsonIslem.Designer.cs">
       <DependentUpon>FrmGarsonIslem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kullanici\FrmKullanicilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kullanici\FrmKullanicilar.Designer.cs">
+      <DependentUpon>FrmKullanicilar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Masa\FrmMasa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +157,12 @@
     <Compile Include="Musteri\FrmMusteriIslem.Designer.cs">
       <DependentUpon>FrmMusteriIslem.cs</DependentUpon>
     </Compile>
+    <Compile Include="OdemeHareket\FrmOdemeHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeHareket\FrmOdemeHareketleri.Designer.cs">
+      <DependentUpon>FrmOdemeHareketleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="OdemeTuru\FrmOdemeTuru.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +183,12 @@
     <Compile Include="Tanim\FrmTanim.Designer.cs">
       <DependentUpon>FrmTanim.cs</DependentUpon>
     </Compile>
+    <Compile Include="UrunHareket\FrmUrunHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunHareket\FrmUrunHareket.Designer.cs">
+      <DependentUpon>FrmUrunHareket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Urun\FrmUrun.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,8 +201,17 @@
     <Compile Include="Urun\FrmUrunIslem.Designer.cs">
       <DependentUpon>FrmUrunIslem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Adisyon\FrmAdisyonHareket.resx">
+      <DependentUpon>FrmAdisyonHareket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnaMenu\FrmAnaMenu.resx">
       <DependentUpon>FrmAnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaMenu\FrmAnaMenuBilgi.resx">
+      <DependentUpon>FrmAnaMenuBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaMenu\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fotograf\FrmImageEditor.resx">
       <DependentUpon>FrmImageEditor.cs</DependentUpon>
@@ -175,6 +225,9 @@
     <EmbeddedResource Include="Garson\FrmGarsonIslem.resx">
       <DependentUpon>FrmGarsonIslem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kullanici\FrmKullanicilar.resx">
+      <DependentUpon>FrmKullanicilar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Masa\FrmMasa.resx">
       <DependentUpon>FrmMasa.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Musteri\FrmMusteriIslem.resx">
       <DependentUpon>FrmMusteriIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeHareket\FrmOdemeHareketleri.resx">
+      <DependentUpon>FrmOdemeHareketleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OdemeTuru\FrmOdemeTuru.resx">
       <DependentUpon>FrmOdemeTuru.cs</DependentUpon>
@@ -205,6 +261,9 @@
     </Compile>
     <EmbeddedResource Include="Tanim\FrmTanim.resx">
       <DependentUpon>FrmTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunHareket\FrmUrunHareket.resx">
+      <DependentUpon>FrmUrunHareket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Urun\FrmUrun.resx">
       <DependentUpon>FrmUrun.cs</DependentUpon>
@@ -228,6 +287,10 @@
     <ProjectReference Include="..\Sas.Restaurant.Business\Sas.Restaurant.Business.csproj">
       <Project>{9710e309-5304-4ce7-9d9f-6593dbef7506}</Project>
       <Name>Sas.Restaurant.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sas.Restaurant.Components\Sas.Restaurant.Components.csproj">
+      <Project>{BBA0F827-36F1-434D-9B1B-3142D344F927}</Project>
+      <Name>Sas.Restaurant.Components</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sas.Restaurant.Core\Sas.Restaurant.Core.csproj">
       <Project>{D71151EB-1F60-4946-8767-DD9975C6B7F8}</Project>

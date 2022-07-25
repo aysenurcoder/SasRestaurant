@@ -12,6 +12,10 @@ using System.Windows.Forms;
 using Sas.Restaurant.UI.BackOffice.Masa;
 using Sas.Restaurant.UI.BackOffice.Garson;
 using Sas.Restaurant.UI.BackOffice.OdemeTuru;
+using Sas.Restaurant.UI.BackOffice.Adisyon;
+using Sas.Restaurant.UI.BackOffice.UrunHareket;
+using Sas.Restaurant.UI.BackOffice.OdemeHareketleri;
+using Sas.Restaurant.UI.BackOffice.Kullanici;
 
 namespace Sas.Restaurant.UI.BackOffice.AnaMenu
 {
@@ -25,6 +29,9 @@ namespace Sas.Restaurant.UI.BackOffice.AnaMenu
                 FrmSetupConnection form = new FrmSetupConnection();
                 form.ShowDialog();
             }
+            FrmAnaMenuBilgi formBilgi = new FrmAnaMenuBilgi();
+            formBilgi.MdiParent = this;
+            formBilgi.Show();
         }
 
         private void btnUrun_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -59,6 +66,39 @@ namespace Sas.Restaurant.UI.BackOffice.AnaMenu
         {
             FrmOdemeTuru form = new FrmOdemeTuru();
             form.MdiParent = this;
+            form.Show();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmAdisyonHareket form = new FrmAdisyonHareket();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUrunHareket form = new FrmUrunHareket();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmOdemeHareketleri form = new FrmOdemeHareketleri();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraForm1 form = new XtraForm1();
+            form.Show();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmKullanicilar form = new FrmKullanicilar();
             form.Show();
         }
     }

@@ -18,5 +18,6 @@ namespace Sas.Restaurant.Entities.Tables
         public virtual ICollection<Telefon> Telefonlar { get; set; }
         public virtual ICollection<Adres> Adresler { get; set; }
         public virtual ICollection<Adisyon> Adisyonlar { get; set; }
+        public virtual ICollection<AramaKaydi> AramaKayitlari { get; set; }
     }
 }

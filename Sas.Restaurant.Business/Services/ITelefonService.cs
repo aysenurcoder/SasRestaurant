@@ -1,4 +1,5 @@
 ﻿using Sas.Restaurant.Business.Services.Base;
+using Sas.Restaurant.Entities.Dtos;
 using Sas.Restaurant.Entities.Tables;
 using System;
 using System.Collections.Generic;

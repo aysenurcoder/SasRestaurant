@@ -33,11 +33,14 @@ namespace Sas.Restaurant.DataAccess.Contexts.Restaurtant
         public DbSet<Adres> Adresler { get; set; }
         public DbSet<Adisyon> Adisyonlar { get; set; }
         public DbSet<EkMalzemeHareket> EkMalzemeHareketleri { get; set; }
-        public DbSet<Garson> Garsonlar { get; set; }
+        public DbSet<Personel> Garsonlar { get; set; }
         public DbSet<Masa> Masalar { get; set; }        
         public DbSet<UrunHareket> UrunHareketleri { get; set; }
         public DbSet<OdemeTuru> odemeTurleri { get; set; }
         public DbSet<OdemeHareket> odemeHareketleri { get; set; }
+        public DbSet<UrunNot> urunNotlari { get; set; }
+        public DbSet<AramaKaydi> AramaKayitlari { get; set; }
+        public DbSet<Kullanici> Kullanicilar { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -64,6 +67,9 @@ namespace Sas.Restaurant.DataAccess.Contexts.Restaurtant
             modelBuilder.Entity<EkMalzeme>().HasRequired(c => c.Urun).WithMany(c => c.EkMalzemeler).HasForeignKey(c => c.UrunId);
             modelBuilder.Entity<Urun>().HasRequired(c => c.UrunGrup).WithOptional().Map(c=>c.MapKey("UrunGrupId"));
             modelBuilder.Entity<Porsiyon>().HasRequired(c => c.Birim).WithOptional().Map(c=>c.MapKey("BirimId"));
+            modelBuilder.Entity<UrunNot>().HasRequired(c => c.Urun).WithMany(c=>c.UrunNotlari).HasForeignKey(c => c.UrunId);
+            modelBuilder.Entity<AramaKaydi>().HasOptional(c => c.Musteri).WithMany(c=>c.AramaKayitlari).HasForeignKey(c => c.MusteriId);
+
 
             //Müşteri ilişkileri
             modelBuilder.Entity<Telefon>().HasRequired(c => c.Musteri).WithMany(c => c.Telefonlar).HasForeignKey(c => c.Musteri);
@@ -97,11 +103,14 @@ namespace Sas.Restaurant.DataAccess.Contexts.Restaurtant
             modelBuilder.Configurations.Add(new AdresMap());
             modelBuilder.Configurations.Add(new AdisyonMap());
             modelBuilder.Configurations.Add(new EkMalzemeHareketMap());
-            modelBuilder.Configurations.Add(new GarsonMap());
+            modelBuilder.Configurations.Add(new PersonelMap());
             modelBuilder.Configurations.Add(new MasaMap());
             modelBuilder.Configurations.Add(new UrunHareketMap());
             modelBuilder.Configurations.Add(new OdemeTuruMap());
             modelBuilder.Configurations.Add(new OdemeHareketMap());
+            modelBuilder.Configurations.Add(new UrunNotMap());
+            modelBuilder.Configurations.Add(new AramaKaydiMap());
+            modelBuilder.Configurations.Add(new KullaniciMap());
         }
 
 

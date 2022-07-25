@@ -35,22 +35,22 @@ namespace Sas.Restaurant.UI.BackOffice.Masa
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.txtMasaAdi = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtKonumu = new DevExpress.XtraEditors.ButtonEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtKapasite = new DevExpress.XtraEditors.CalcEdit();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtKapasite = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.txtKonumu = new DevExpress.XtraEditors.ButtonEdit();
+            this.txtMasaAdi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupAltMenu)).BeginInit();
             this.groupAltMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMasaAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKonumu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKapasite.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKapasite.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKonumu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMasaAdi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupAltMenu
@@ -122,69 +122,6 @@ namespace Sas.Restaurant.UI.BackOffice.Masa
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Masa Bilgisi";
             // 
-            // txtMasaAdi
-            // 
-            this.txtMasaAdi.Location = new System.Drawing.Point(129, 31);
-            this.txtMasaAdi.Name = "txtMasaAdi";
-            this.txtMasaAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMasaAdi.Properties.Appearance.Options.UseFont = true;
-            this.txtMasaAdi.Size = new System.Drawing.Size(416, 22);
-            this.txtMasaAdi.TabIndex = 1;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Options.UseTextOptions = true;
-            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl2.Location = new System.Drawing.Point(7, 33);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(116, 20);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Masa Adı :";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Options.UseTextOptions = true;
-            this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl3.Location = new System.Drawing.Point(7, 59);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(116, 20);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "Konumu :";
-            // 
-            // txtKonumu
-            // 
-            this.txtKonumu.Location = new System.Drawing.Point(129, 58);
-            this.txtKonumu.Name = "txtKonumu";
-            this.txtKonumu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtKonumu.Size = new System.Drawing.Size(416, 22);
-            this.txtKonumu.TabIndex = 3;
-            this.txtKonumu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtKonumu_ButtonClick);
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Options.UseTextOptions = true;
-            this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl4.Location = new System.Drawing.Point(7, 85);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(116, 20);
-            this.labelControl4.TabIndex = 4;
-            this.labelControl4.Text = "Kapasitesi :";
-            // 
-            // txtKapasite
-            // 
-            this.txtKapasite.Location = new System.Drawing.Point(129, 84);
-            this.txtKapasite.Name = "txtKapasite";
-            this.txtKapasite.Properties.ShowDropDown = DevExpress.XtraEditors.Controls.ShowDropDown.Never;
-            this.txtKapasite.Size = new System.Drawing.Size(177, 22);
-            this.txtKapasite.TabIndex = 5;
-            // 
             // txtAciklama
             // 
             this.txtAciklama.Location = new System.Drawing.Point(129, 111);
@@ -204,6 +141,69 @@ namespace Sas.Restaurant.UI.BackOffice.Masa
             this.labelControl5.TabIndex = 8;
             this.labelControl5.Text = "Açıklama :";
             // 
+            // txtKapasite
+            // 
+            this.txtKapasite.Location = new System.Drawing.Point(129, 84);
+            this.txtKapasite.Name = "txtKapasite";
+            this.txtKapasite.Properties.ShowDropDown = DevExpress.XtraEditors.Controls.ShowDropDown.Never;
+            this.txtKapasite.Size = new System.Drawing.Size(177, 22);
+            this.txtKapasite.TabIndex = 5;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Options.UseTextOptions = true;
+            this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl4.Location = new System.Drawing.Point(7, 85);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(116, 20);
+            this.labelControl4.TabIndex = 4;
+            this.labelControl4.Text = "Kapasitesi :";
+            // 
+            // txtKonumu
+            // 
+            this.txtKonumu.Location = new System.Drawing.Point(129, 58);
+            this.txtKonumu.Name = "txtKonumu";
+            this.txtKonumu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtKonumu.Size = new System.Drawing.Size(416, 22);
+            this.txtKonumu.TabIndex = 3;
+            this.txtKonumu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtKonumu_ButtonClick);
+            // 
+            // txtMasaAdi
+            // 
+            this.txtMasaAdi.Location = new System.Drawing.Point(129, 31);
+            this.txtMasaAdi.Name = "txtMasaAdi";
+            this.txtMasaAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMasaAdi.Properties.Appearance.Options.UseFont = true;
+            this.txtMasaAdi.Size = new System.Drawing.Size(416, 22);
+            this.txtMasaAdi.TabIndex = 1;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Options.UseTextOptions = true;
+            this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl3.Location = new System.Drawing.Point(7, 59);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(116, 20);
+            this.labelControl3.TabIndex = 2;
+            this.labelControl3.Text = "Konumu :";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Options.UseTextOptions = true;
+            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl2.Location = new System.Drawing.Point(7, 33);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(116, 20);
+            this.labelControl2.TabIndex = 2;
+            this.labelControl2.Text = "Masa Adı :";
+            // 
             // FrmMasaIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -217,15 +217,15 @@ namespace Sas.Restaurant.UI.BackOffice.Masa
             this.MinimizeBox = false;
             this.Name = "FrmMasaIslem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMasaIslem";
+            this.Text = "Masa İşlem Formu ";
             ((System.ComponentModel.ISupportInitialize)(this.groupAltMenu)).EndInit();
             this.groupAltMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtMasaAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKonumu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKapasite.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKapasite.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKonumu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMasaAdi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

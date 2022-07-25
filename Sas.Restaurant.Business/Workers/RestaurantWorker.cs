@@ -22,11 +22,14 @@ namespace Sas.Restaurant.Business.Workers
         public IAdresService AdresService { get; set; }
         public IAdisyonService AdisyonService { get; set; }
         public IEkMalzemeHareketService EkMalzemeHareketService { get; set; }
-        public IGarsonService GarsonService { get; set; }
+        public IPersonelService GarsonService { get; set; }
         public IMasaService MasaService { get; set; }
         public IUrunHareketService UrunHareketService { get; set; }
         public IOdemeTuruService OdemeTuruService { get; set; }
         public IOdemeHareketService OdemeHareketService { get; set; }
+        public IUrunNotService UrunNotService { get; set; }
+        public IAramaKaydiService AramaKaydiService { get; set; }
+        public IKullaniciService KullaniciService { get; set; }
 
         public RestaurantWorker(string connetionString = null)
         {
@@ -40,11 +43,14 @@ namespace Sas.Restaurant.Business.Workers
             AdresService = new AdresManager(_uow);
             AdisyonService = new AdisyonManager(_uow);
             EkMalzemeHareketService = new EkMalzemeHareketManager(_uow);
-            GarsonService = new GarsonManager(_uow);
+            GarsonService = new PersonelManager(_uow);
             MasaService = new MasaManager(_uow);
             UrunHareketService = new UrunHareketManager(_uow);
             OdemeTuruService = new OdemeTuruManager(_uow);
             OdemeHareketService = new OdemeHareketManager(_uow);
+            UrunNotService = new UrunNotManager(_uow);
+            AramaKaydiService = new AramaKaydiManager(_uow);
+            KullaniciService = new KullaniciManager(_uow);
         }
 
         public bool Commit()
